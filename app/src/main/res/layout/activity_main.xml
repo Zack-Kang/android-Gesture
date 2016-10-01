@@ -10,8 +10,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zack.android.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <com.zack.android.views.AGroupView
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <com.zack.android.views.BGroupView
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="266dp"
+            android:layout_height="400dp"
+            android:layout_weight="0.33"
+            android:weightSum="1">
+            <com.zack.android.views.CTextView
+                android:background="@color/colorPrimary"
+                android:layout_width="194dp"
+                android:layout_height="200dp"
+                android:layout_weight="0.28" />
+        </com.zack.android.views.BGroupView>
+    </com.zack.android.views.AGroupView>
 </RelativeLayout>
